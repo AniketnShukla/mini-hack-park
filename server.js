@@ -13,7 +13,7 @@ db.authenticate()
     .then(() => console.log('Database Connected'))
     .catch((e) => console.log(`Error connecting to Database: ${e}`));
     
-app.use("/ecom", parkingRoutes)
+app.use("/", parkingRoutes)
 
 app.use("/health", (req, res) => {
     res.json({
