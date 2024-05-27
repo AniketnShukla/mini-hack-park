@@ -9,8 +9,12 @@ exports.fetchFreeSlots = async ( req, res ) => {
                 }
             }
             );
+        slotsArray = [];
+        data.forEach(element => {
+            slotsArray.push(element.Id);
+        });
         res.json({
-            slots: data
+            slots: slotsArray
         });
     } catch (error) {
         console.log(`Error fetching products: ${error}`)
